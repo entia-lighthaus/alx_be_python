@@ -10,12 +10,12 @@ def calculate_future_date(days):
     print("Future Date:", future_date.strftime("%Y-%m-%d"))
 
 def main():
-    # Part 1
+    # Part 1: Display current date and time
     display_current_datetime()
 
-    # Part 2
+    # Part 2: Calculate future date
     try:
-        days = int(input("Enter the number of days to add: "))
+        days = int(input("Enter the number of days to add to the current date: "))
         calculate_future_date(days)
     except ValueError:
         print("Please enter a valid integer for the number of days.")
