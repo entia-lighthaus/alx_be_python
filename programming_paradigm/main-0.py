@@ -1,5 +1,3 @@
-# main-0.py
-
 import sys
 from bank_account import BankAccount
 
@@ -18,7 +16,7 @@ def main():
             return
         amount = float(sys.argv[2])
         if account.deposit(amount):
-            print(f"Deposited ${amount:.2f}")
+            print(f"Deposit successful: ${amount:.2f}")
         else:
             print("Invalid deposit amount.")
         account.display_balance()
@@ -29,9 +27,9 @@ def main():
             return
         amount = float(sys.argv[2])
         if account.withdraw(amount):
-            print(f"Withdrew ${amount:.2f}")
+            print(f"Withdrawal successful: ${amount:.2f}")
         else:
-            print("Insufficient funds or invalid amount.")
+            print("Insufficient funds.")
         account.display_balance()
 
     elif action == "balance":
@@ -42,3 +40,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
