@@ -15,10 +15,8 @@ def main():
             print("Please specify the amount to deposit.")
             return
         amount = float(sys.argv[2])
-        if account.deposit(amount):
-            print(f"Deposit successful: ${amount:.2f}")
-        else:
-            print("Invalid deposit amount.")
+        account.deposit(amount)
+        print(f"Deposited ${amount:.2f}")
         account.display_balance()
 
     elif action == "withdraw":
@@ -27,9 +25,9 @@ def main():
             return
         amount = float(sys.argv[2])
         if account.withdraw(amount):
-            print(f"Withdrawal successful: ${amount:.2f}")
+            print(f"Withdrew ${amount:.2f}")
         else:
-            print("Insufficient funds.")
+            print("Insufficient funds")
         account.display_balance()
 
     elif action == "balance":
@@ -40,4 +38,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
